@@ -51,6 +51,27 @@ Tests (sans clé ni réseau, faux clients IA) :
 python -m pytest -q
 ```
 
+### Front (Angular 21)
+
+```sh
+cd frontend
+npm install
+npm start          # http://localhost:4200, /api passe par le proxy vers Flask (port 5000)
+npm test           # tests unitaires (Vitest)
+npm run build      # production, dans dist/frontend
+```
+
+Angular 21 plutôt que 22 : la 22 exige Node 24.15 ou plus.
+
+| Dossier | Rôle |
+|---|---|
+| `src/app/core/` | Appels API, conversation (`ChatStore`), réveil du serveur (`ServerStatus`), découpage des renvois `[1]` |
+| `src/app/features/assistant/` | Page de l'assistant : bulles, sources, documents, saisie, états d'erreur |
+| `src/app/features/how-it-works/` | Page "Comment ça marche", à l'identité du développeur |
+| `src/styles.css` | Tokens du design system Rivelune (thèmes Jour et Nuit) |
+
+L'URL de l'API en production est dans `src/environments/environment.ts`.
+
 ## API
 
 | Méthode | Route | Rôle |
@@ -73,10 +94,15 @@ Erreurs : `{"error": {"code", "message"}}` avec `invalid_question` (400),
 - Le prompt impose de répondre uniquement depuis les extraits et ignore les
   demandes de changement de rôle.
 
-## Déploiement (Render)
+## Déploiement
 
-- Build : `pip install -r requirements.txt`
-- Start : `gunicorn wsgi:app --workers 1 --bind 0.0.0.0:$PORT`
+En ligne sur https://demo-assistant.maximenkengato.com, dans l'app Sevalla qui
+héberge toutes les démos du portfolio (dépôt `portfolio-demos`, dossier
+`sevalla/`) : ce dépôt y est figé par `vendor.sh`, le front est compilé dans
+l'image et servi par nginx avec l'API sur le même domaine.
+
+- API : `gunicorn wsgi:app --workers 1 --threads 4`
   (1 worker : le rate limit et le quota sont en mémoire)
-- Variables : celles de `.env.example`
+- Variable obligatoire : `MISTRAL_API_KEY` ; les autres ont une valeur par défaut (`.env.example`)
 - L'index `data/index/` est commité : aucun recalcul au démarrage.
+- Python 3.11 ou plus (numpy 2.4).

@@ -1,0 +1,60 @@
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding: 8px clamp(16px, 2vw, 24px);
+  background: var(--dev-ink);
+  color: var(--dev-bg);
+  font: 400 13px/18px var(--font-dev);
+}
+
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notice strong {
+  font-weight: 800;
+}
+
+.mark {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  background: var(--dev-accent);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.links a {
+  color: var(--dev-bg);
+  text-underline-offset: 3px;
+}
+
+.links .contact {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 14px;
+  background: var(--dev-accent-strong);
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.banner :focus-visible {
+  outline-color: var(--dev-bg);
+}
+
+@media (max-width: 720px) {
+  .author {
+    display: none;
+  }
+}

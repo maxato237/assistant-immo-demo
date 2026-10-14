@@ -1,0 +1,162 @@
+/* Tokens du design system Rivelune (Claude Design), thèmes Jour et Nuit.
+   Le cadre "développeur" (bandeau de démo, page Comment ça marche) a ses propres tokens --dev-*. */
+:root {
+  --surface: #f3f5f2;
+  --surface-raised: #ffffff;
+  --line: #d3dad4;
+  --ink: #13201f;
+  --ink-muted: #53625f;
+  --saone: #1f5b52;
+  --on-saone: #ffffff;
+  --saone-soft: #dcebe6;
+  --facade: #b07a1c;
+  --danger: #b3261e;
+
+  --font-display: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Figtree', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-8: 32px;
+
+  --radius-sm: 6px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  --dev-bg: #f3f2f2;
+  --dev-ink: #201e1d;
+  --dev-ink-muted: #444141;
+  --dev-hairline: #d7d3d3;
+  --dev-accent: #ec3013;
+  --dev-accent-strong: #dd2b0f;
+  --dev-accent-text: #ae1800;
+  --font-dev: 'Archivo', system-ui, sans-serif;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0e1918;
+    --surface-raised: #172524;
+    --line: #2b3c3a;
+    --ink: #e7eeec;
+    --ink-muted: #9db0ac;
+    --saone: #6cc2b3;
+    --on-saone: #0e1918;
+    --saone-soft: #173430;
+    --facade: #e0b055;
+    --danger: #f2a69e;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--saone);
+}
+
+:focus-visible {
+  outline: 2px solid var(--saone);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Bouton rond du design system (fermeture, documents). */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 1px solid var(--ink-muted);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: var(--radius-full);
+  background: var(--saone);
+  color: var(--on-saone);
+  font: 600 14px/20px var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Numéro de source dans le texte d'une réponse. */
+.cite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: var(--radius-full);
+  background: var(--saone-soft);
+  color: var(--saone);
+  font: 500 11px/1 var(--font-mono);
+  vertical-align: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
