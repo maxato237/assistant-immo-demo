@@ -1,0 +1,22 @@
+[
+ {
+  "id": "catalogue-biens",
+  "title": "Catalogue des biens",
+  "pages": 2
+ },
+ {
+  "id": "faq-agence",
+  "title": "Questions fréquentes sur l'agence",
+  "pages": 1
+ },
+ {
+  "id": "honoraires-et-frais",
+  "title": "Honoraires et frais",
+  "pages": 1
+ },
+ {
+  "id": "visites-et-candidature",
+  "title": "Visites et dossier de candidature",
+  "pages": 1
+ }
+]

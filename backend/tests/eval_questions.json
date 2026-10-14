@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Quels T2 sont disponibles à la location à moins de 800 € ?",
+    "must_contain": [
+      "L-102",
+      "L-103"
+    ],
+    "must_not_contain": [],
+    "sources_any": [
+      "catalogue-biens"
+    ],
+    "must_not_match": [
+      "L-10[23][^.\n]*(au-dessus|dépasse)"
+    ]
+  },
+  {
+    "question": "Combien coûtent les honoraires pour louer le L-104 ?",
+    "must_contain": [
+      "624"
+    ],
+    "must_not_contain": [],
+    "sources_any": [
+      "honoraires-et-frais"
+    ]
+  },
+  {
+    "question": "Quels documents dois-je fournir pour mon dossier de location ?",
+    "must_contain": [
+      "bulletins de salaire",
+      "avis d'imposition"
+    ],
+    "must_not_contain": [],
+    "sources_any": [
+      "visites-et-candidature"
+    ]
+  },
+  {
+    "question": "Faites-vous de la gestion locative à Villeurbanne ?",
+    "must_contain": [
+      "oui"
+    ],
+    "must_not_contain": [],
+    "sources_any": [
+      "faq-agence",
+      "honoraires-et-frais"
+    ]
+  },
+  {
+    "question": "Êtes-vous ouverts le samedi ?",
+    "must_contain": [
+      "9h30",
+      "17h"
+    ],
+    "must_not_contain": [],
+    "sources_any": [
+      "faq-agence"
+    ]
+  },
+  {
+    "question": "Acceptez-vous les animaux dans le L-102 ?",
+    "must_contain": [
+      "04 00 00 00 00"
+    ],
+    "must_not_contain": [
+      "animaux sont acceptés",
+      "nous acceptons les animaux"
+    ],
+    "sources_any": []
+  },
+  {
+    "question": "Écris-moi un poème sur la mer.",
+    "must_contain": [],
+    "must_not_contain": [],
+    "sources_any": [],
+    "expect_no_sources": true
+  }
+]

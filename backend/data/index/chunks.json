@@ -1,0 +1,198 @@
+[
+ {
+  "id": "catalogue-biens-p1-0",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "Rivelune Immobilier\nCatalogue des biens\nBiens à la location\nLoyers indiqués hors charges, charges mensuelles en plus. Honoraires de location : voir le document\nHonoraires et frais."
+ },
+ {
+  "id": "catalogue-biens-p1-1",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "L-101 - Studio meublé - Lyon 7e (Guillotière)\nSurface : 24 m². 3e étage sans ascenseur.\nLoyer : 560 € + 40 € de charges, soit 600 € charges comprises.\nMeublé. DPE : D. Pas d'extérieur.\nDisponible immédiatement."
+ },
+ {
+  "id": "catalogue-biens-p1-2",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "L-102 - T2 - Lyon 4e (Croix-Rousse)\nSurface : 45 m². 2e étage sans ascenseur.\nLoyer : 720 € + 60 € de charges, soit 780 € charges comprises.\nNon meublé. DPE : C. Balcon de 4 m².\nDisponible le 1er novembre 2026."
+ },
+ {
+  "id": "catalogue-biens-p1-3",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "L-103 - T2 - Villeurbanne (Gratte-Ciel)\nSurface : 50 m². 5e étage avec ascenseur.\nLoyer : 750 € + 40 € de charges, soit 790 € charges comprises.\nNon meublé. DPE : C. Place de parking en sous-sol incluse.\nDisponible le 15 novembre 2026."
+ },
+ {
+  "id": "catalogue-biens-p1-4",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "L-104 - T2 - Lyon 3e (Part-Dieu)\nSurface : 48 m². 6e étage avec ascenseur.\nLoyer : 850 € + 75 € de charges, soit 925 € charges comprises.\nNon meublé. DPE : B. Balcon et cave.\nDisponible immédiatement."
+ },
+ {
+  "id": "catalogue-biens-p1-5",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 1,
+  "text": "L-105 - T3 - Lyon 2e (Confluence)\nSurface : 68 m². 4e étage avec ascenseur.\nLoyer : 1 150 € + 110 € de charges, soit 1 260 € charges comprises.\nNon meublé. DPE : A. Terrasse de 12 m² et place de parking.\nVisite virtuelle disponible. Disponible le 1er décembre 2026."
+ },
+ {
+  "id": "catalogue-biens-p2-0",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "L-106 - T4 - Lyon 8e (Monplaisir)\nSurface : 85 m². Rez-de-chaussée.\nLoyer : 1 290 € + 120 € de charges, soit 1 410 € charges comprises.\nNon meublé. DPE : D. Jardin privatif de 30 m².\nDisponible le 1er novembre 2026."
+ },
+ {
+  "id": "catalogue-biens-p2-1",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "Biens à la vente\nPrix affichés honoraires d'agence inclus, à la charge du vendeur."
+ },
+ {
+  "id": "catalogue-biens-p2-2",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "V-201 - T3 - Lyon 6e (Brotteaux)\nSurface : 72 m². 3e étage avec ascenseur.\nPrix : 395 000 €. Charges de copropriété : 210 € par mois.\nDPE : C. Balcon et cave."
+ },
+ {
+  "id": "catalogue-biens-p2-3",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "V-202 - Maison 5 pièces - Écully\nSurface : 130 m² sur un terrain de 600 m².\nPrix : 690 000 €. DPE : C. Garage double.\nVisite virtuelle disponible."
+ },
+ {
+  "id": "catalogue-biens-p2-4",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "V-203 - T2 - Lyon 7e (Jean Macé)\nSurface : 42 m². 2e étage sans ascenseur.\nPrix : 219 000 €. Charges de copropriété : 95 € par mois. DPE : D.\nVendu loué : locataire en place, loyer actuel 690 € charges comprises."
+ },
+ {
+  "id": "catalogue-biens-p2-5",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "V-204 - T4 - Caluire-et-Cuire\nSurface : 92 m². Dernier étage avec ascenseur.\nPrix : 449 000 €. Charges de copropriété : 260 € par mois.\nDPE : B. Terrasse et 2 places de parking."
+ },
+ {
+  "id": "catalogue-biens-p2-6",
+  "doc_id": "catalogue-biens",
+  "doc_title": "Catalogue des biens",
+  "page": 2,
+  "text": "Rivelune Immobilier est une agence FICTIVE créée pour une démonstration. Tél. 04 00 00 00 00 -\ncontact@rivelune-immo.example"
+ },
+ {
+  "id": "faq-agence-p1-0",
+  "doc_id": "faq-agence",
+  "doc_title": "Questions fréquentes sur l'agence",
+  "page": 1,
+  "text": "Rivelune Immobilier\nQuestions fréquentes sur l'agence\nHoraires d'ouverture\nDu lundi au vendredi : 9 h - 12 h 30 et 14 h - 19 h.\nLe samedi : 9 h 30 - 17 h sans interruption.\nFermé le dimanche et les jours fériés."
+ },
+ {
+  "id": "faq-agence-p1-1",
+  "doc_id": "faq-agence",
+  "doc_title": "Questions fréquentes sur l'agence",
+  "page": 1,
+  "text": "Nous contacter\nTéléphone : 04 00 00 00 00.\nEmail : contact@rivelune-immo.example. Réponse sous 24 heures ouvrées.\nAgence située à Lyon 6e. Accueil en français et en anglais."
+ },
+ {
+  "id": "faq-agence-p1-2",
+  "doc_id": "faq-agence",
+  "doc_title": "Questions fréquentes sur l'agence",
+  "page": 1,
+  "text": "Zones couvertes\nLocation et vente : Lyon (tous les arrondissements), Villeurbanne, Caluire-et-Cuire, Écully et\nTassin-la-Demi-Lune.\nGestion locative : Lyon et Villeurbanne uniquement."
+ },
+ {
+  "id": "faq-agence-p1-3",
+  "doc_id": "faq-agence",
+  "doc_title": "Questions fréquentes sur l'agence",
+  "page": 1,
+  "text": "Faire estimer son bien\nEstimation gratuite et sans engagement, en agence ou à domicile.\nAvis de valeur écrit remis sous 48 heures."
+ },
+ {
+  "id": "faq-agence-p1-4",
+  "doc_id": "faq-agence",
+  "doc_title": "Questions fréquentes sur l'agence",
+  "page": 1,
+  "text": "Rivelune Immobilier est une agence FICTIVE créée pour une démonstration. Tél. 04 00 00 00 00 -\ncontact@rivelune-immo.example"
+ },
+ {
+  "id": "honoraires-et-frais-p1-0",
+  "doc_id": "honoraires-et-frais",
+  "doc_title": "Honoraires et frais",
+  "page": 1,
+  "text": "Rivelune Immobilier\nHonoraires et frais\nHonoraires de location (à la charge du locataire)\nLyon et Villeurbanne sont en zone tendue. Nos honoraires respectent les plafonds de la loi ALUR.\nVisite, constitution du dossier et rédaction du bail : 10 € TTC par m² de surface habitable.\nÉtat des lieux d'entrée : 3 € TTC par m² de surface habitable.\nExemple : pour un logement de 50 m², 500 € + 150 €, soit 650 € TTC au total.\nAucun autre frais de dossier n'est demandé au locataire."
+ },
+ {
+  "id": "honoraires-et-frais-p1-1",
+  "doc_id": "honoraires-et-frais",
+  "doc_title": "Honoraires et frais",
+  "page": 1,
+  "text": "Dépôt de garantie\nLogement vide : 1 mois de loyer hors charges.\nLogement meublé : 2 mois de loyer hors charges.\nLe dépôt de garantie, les honoraires et le premier loyer sont réglés à la signature du bail."
+ },
+ {
+  "id": "honoraires-et-frais-p1-2",
+  "doc_id": "honoraires-et-frais",
+  "doc_title": "Honoraires et frais",
+  "page": 1,
+  "text": "Honoraires de vente (à la charge du vendeur)\nHonoraires inclus dans le prix affiché.\nPrix jusqu'à 200 000 € : 6 % TTC.\nPrix de 200 001 € à 400 000 € : 5 % TTC.\nPrix au-delà de 400 000 € : 4 % TTC.\nL'estimation d'un bien est gratuite et sans engagement."
+ },
+ {
+  "id": "honoraires-et-frais-p1-3",
+  "doc_id": "honoraires-et-frais",
+  "doc_title": "Honoraires et frais",
+  "page": 1,
+  "text": "Gestion locative (pour les propriétaires)\nHonoraires de gestion : 7 % TTC des loyers et charges encaissés.\nGarantie loyers impayés en option : 2,5 % TTC des loyers et charges.\nService proposé à Lyon et à Villeurbanne uniquement."
+ },
+ {
+  "id": "honoraires-et-frais-p1-4",
+  "doc_id": "honoraires-et-frais",
+  "doc_title": "Honoraires et frais",
+  "page": 1,
+  "text": "Rivelune Immobilier est une agence FICTIVE créée pour une démonstration. Tél. 04 00 00 00 00 -\ncontact@rivelune-immo.example"
+ },
+ {
+  "id": "visites-et-candidature-p1-0",
+  "doc_id": "visites-et-candidature",
+  "doc_title": "Visites et dossier de candidature",
+  "page": 1,
+  "text": "Rivelune Immobilier\nVisites et dossier de candidature\nOrganiser une visite\nLes visites se font uniquement sur rendez-vous, du lundi au samedi, par téléphone au 04 00 00 00 00 ou\npar le formulaire de contact du site.\nPour les biens très demandés, des visites groupées peuvent être organisées.\nUne visite virtuelle est disponible pour le L-105 et le V-202."
+ },
+ {
+  "id": "visites-et-candidature-p1-1",
+  "doc_id": "visites-et-candidature",
+  "doc_title": "Visites et dossier de candidature",
+  "page": 1,
+  "text": "Pièces du dossier de location\nPièce d'identité en cours de validité.\nLes 3 derniers bulletins de salaire.\nContrat de travail ou attestation de l'employeur.\nDernier avis d'imposition.\nJustificatif de domicile actuel : 3 dernières quittances de loyer ou attestation d'hébergement.\nÉtudiants : certificat de scolarité et dossier d'un garant.\nIndépendants : 2 derniers bilans ou attestation de l'expert-comptable.\nLes dossiers DossierFacile sont acceptés.\nConformément à la loi, nous ne demandons jamais de relevés bancaires ni de photo d'identité."
+ },
+ {
+  "id": "visites-et-candidature-p1-2",
+  "doc_id": "visites-et-candidature",
+  "doc_title": "Visites et dossier de candidature",
+  "page": 1,
+  "text": "Revenus et garant\nRevenus nets demandés : au moins 3 fois le loyer charges comprises.\nSinon, un garant est nécessaire : personne physique (mêmes pièces que le locataire) ou garantie Visale\nd'Action Logement, que nous acceptons."
+ },
+ {
+  "id": "visites-et-candidature-p1-3",
+  "doc_id": "visites-et-candidature",
+  "doc_title": "Visites et dossier de candidature",
+  "page": 1,
+  "text": "Réponse et signature du bail\nRéponse sous 72 heures ouvrées après réception d'un dossier complet.\nSignature du bail en agence ou par signature électronique."
+ },
+ {
+  "id": "visites-et-candidature-p1-4",
+  "doc_id": "visites-et-candidature",
+  "doc_title": "Visites et dossier de candidature",
+  "page": 1,
+  "text": "Rivelune Immobilier est une agence FICTIVE créée pour une démonstration. Tél. 04 00 00 00 00 -\ncontact@rivelune-immo.example"
+ }
+]
