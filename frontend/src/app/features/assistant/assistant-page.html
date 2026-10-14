@@ -1,0 +1,120 @@
+<div class="page">
+  <app-demo-banner />
+
+  <header class="agency">
+    <div class="brand">
+      <span class="moon" aria-hidden="true"></span>
+      <div>
+        <h1 class="name">Rivelune Immobilier</h1>
+        <p class="tagline">Assistant de l'agence, Lyon</p>
+      </div>
+    </div>
+    <div class="actions">
+      @if (chat.hasStarted()) {
+        <button type="button" class="new" (click)="chat.reset()">Nouvelle conversation</button>
+      }
+      <button type="button" class="icon-button docs-toggle" aria-label="Voir les documents de l'agence" (click)="openDocuments()">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+          <path d="M14 3v6h6" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="body">
+    <aside class="side" aria-labelledby="side-title">
+      <h2 id="side-title" class="panel-title">Documents de l'agence</h2>
+      <p class="muted">L'assistant répond uniquement à partir de ces documents.</p>
+      <app-documents-list [documents]="server.documents()" />
+    </aside>
+
+    <main class="main">
+      <div class="scroller" #scroller>
+        <div class="column">
+          @if (server.state() === 'waking') {
+            <div class="notice" role="status">
+              <svg class="spinner" aria-hidden="true" width="28" height="28" viewBox="0 0 28 28">
+                <circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="52 20" stroke-linecap="round" />
+                <circle class="spinner-moon" cx="14" cy="14" r="5" />
+              </svg>
+              <p><strong>Démarrage de l'assistant.</strong> Quelques secondes, vous pouvez déjà écrire votre question.</p>
+            </div>
+          }
+          @if (server.state() === 'unavailable') {
+            <div class="notice notice-error" role="alert">
+              <p>L'assistant ne répond pas pour le moment. Rechargez la page dans quelques minutes.</p>
+            </div>
+          }
+
+          @if (!chat.hasStarted()) {
+            <section class="welcome" aria-labelledby="welcome-title">
+              <h2 id="welcome-title" class="welcome-title">Bonjour, que cherchez-vous ?</h2>
+              <p class="muted">Je suis l'assistant de Rivelune Immobilier. Je réponds à vos questions sur nos biens, nos honoraires, les visites et l'agence, en citant toujours le document d'où vient la réponse.</p>
+              <p class="label">Essayez une question</p>
+              <ul class="suggestions">
+                @for (question of suggestions; track question) {
+                  <li><button type="button" class="suggestion" (click)="chat.ask(question)">{{ question }}</button></li>
+                }
+              </ul>
+            </section>
+          } @else {
+            <ol class="conversation" aria-label="Conversation" aria-live="polite">
+              @for (message of chat.messages(); track message.id) {
+                @if (message.role === 'user') {
+                  <li class="from-user"><p class="user-bubble">{{ message.text }}</p></li>
+                }
+                @if (message.role === 'assistant') {
+                  <li><app-assistant-reply [message]="message" (sourceSelected)="openSource($event)" /></li>
+                }
+              }
+              @if (chat.pending()) {
+                <li>
+                  <div class="loading" role="status">
+                    <span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span>
+                    <span class="muted">Recherche dans les documents...</span>
+                  </div>
+                </li>
+              }
+              @if (chat.failure(); as failure) {
+                <li><app-chat-error [code]="failure.code" (retry)="chat.retry()" /></li>
+              }
+            </ol>
+          }
+        </div>
+      </div>
+
+      <div class="composer-bar">
+        <div class="column">
+          <app-composer [busy]="chat.pending()" (submitted)="chat.ask($event)" />
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<dialog #documentsDialog class="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-head">
+    <h2 id="sheet-title" class="panel-title">Documents de l'agence</h2>
+    <button type="button" class="icon-button" aria-label="Fermer" (click)="closeDocuments()">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12" /><path d="M18 6L6 18" /></svg>
+    </button>
+  </div>
+  <p class="muted">L'assistant répond uniquement à partir de ces documents. Touchez-en un pour l'ouvrir.</p>
+  <app-documents-list [documents]="server.documents()" />
+</dialog>
+
+<dialog #sourceDialog class="sheet" aria-labelledby="source-title" (close)="selectedSource.set(null)">
+  @if (selectedSource(); as source) {
+    <div class="sheet-head">
+      <h2 id="source-title" class="panel-title"><span class="cite">{{ source.n }}</span> {{ source.title }}, p. {{ source.page }}</h2>
+      <button type="button" class="icon-button" aria-label="Fermer l'extrait" (click)="closeSource()">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12" /><path d="M18 6L6 18" /></svg>
+      </button>
+    </div>
+    <blockquote class="excerpt">{{ source.excerpt }}</blockquote>
+    @if (selectedSourceUrl(); as url) {
+      <a class="pdf-link" [href]="url" target="_blank" rel="noopener">Voir le document complet (PDF)</a>
+    }
+  }
+</dialog>
