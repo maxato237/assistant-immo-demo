@@ -80,6 +80,22 @@ describe('ChatStore', () => {
     expect(store.failure()?.code).toBe('network');
   });
 
+  it('retrouve le code depuis le statut quand Cloudflare a remplacé le corps', () => {
+    const cloudflarePage = '<!DOCTYPE html><title>502: Bad gateway</title>';
+
+    store.ask('Q1');
+    http.expectOne('/api/ask').flush(cloudflarePage, { status: 502, statusText: 'Bad Gateway' });
+    expect(store.failure()?.code).toBe('llm_unavailable');
+
+    store.retry();
+    http.expectOne('/api/ask').flush(cloudflarePage, { status: 504, statusText: 'Gateway Timeout' });
+    expect(store.failure()?.code).toBe('llm_unavailable');
+
+    store.retry();
+    http.expectOne('/api/ask').flush(cloudflarePage, { status: 500, statusText: 'Internal Server Error' });
+    expect(store.failure()?.code).toBe('internal_error');
+  });
+
   it('repart de zéro avec reset', () => {
     store.ask('Q1');
     http.expectOne('/api/ask').flush(ANSWER);
